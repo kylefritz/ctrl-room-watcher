@@ -6,6 +6,7 @@ var scopedClient = require('scoped-http-client')
 var paths=[
   ["watcher","/Users/administrator/Desktop/ctrl-room-watcher"],
   ["imgs","/Users/administrator/Desktop/empty-words-img"]
+  ["conditions","/Users/administrator/Dropbox/Classes/Prolab/conditions"]
 ];
 var user="humanopoly@gmail.com"
 //var server="ctrlroom.heroku.com"
@@ -28,17 +29,17 @@ _.each(paths,function(tuple){
 	
 	var watcher = watchTree.watchTree(projectPath, {'sample-rate': 1});
 	//watcher.on('fileDeleted', function(path) {
-	//    console.log("fileDeleted" + path + "!");
+	//    console.log("fileDeleted" + path + ".");
 	//});
 	watcher.on('filePreexisted', function(path) {
-	    console.log("filePreexisted " + projectName + " " + path + "!");
-	});
+	    console.log("filePreexisted " + projectName + " " + path + ".");
+	}); 
 	//watcher.on('fileCreated', function(path) {
-	//    console.log("fileCreated " + projectName + " " + path + "!");
+	//    console.log("fileCreated " + projectName + " " + path + ".");
 	//});
 	watcher.on('fileModified', function(path) {
 		sendMessage(path)
-	    console.log("fileModified " + projectName + " " + path + "!");
+	    console.log("fileModified " + projectName + " " + path + ".");
 	})
 
 });
