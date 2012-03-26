@@ -5,7 +5,7 @@ var scopedClient = require('scoped-http-client')
 
 var paths=[
   ["watcher","/Users/administrator/Desktop/ctrl-room-watcher"],
-  ["imgs","/Users/administrator/Desktop/empty-words-img"]
+  ["imgs","/Users/administrator/Desktop/empty-words-img"],
   ["conditions","/Users/administrator/Dropbox/Classes/Prolab/conditions"]
 ];
 var user="humanopoly@gmail.com"
